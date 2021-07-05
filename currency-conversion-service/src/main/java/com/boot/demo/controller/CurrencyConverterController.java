@@ -4,6 +4,7 @@ import com.boot.demo.dao.CurrencyConverterRepository;
 import com.boot.demo.model.CurrencyConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Example;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/v1")
+@RefreshScope
 public class CurrencyConverterController {
 
     @Autowired
@@ -29,10 +31,10 @@ public class CurrencyConverterController {
 
         CurrencyConverter converter = new CurrencyConverter(null, from, to, null);
         Example<CurrencyConverter> conversionFilter = Example.of(converter);
-        return converterRepository.findOne(conversionFilter).get();
+        return converterRepository.findOne(conversionFilter).orElse(null);
     }
 
-    @GetMapping("/message")
+        @GetMapping("/message")
     public String getMessage(){
         return this.message;
     }
