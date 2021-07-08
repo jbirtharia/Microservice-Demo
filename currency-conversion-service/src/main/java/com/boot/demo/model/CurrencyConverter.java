@@ -26,4 +26,5 @@ public class CurrencyConverter {
     private String currencyFrom;
     private String currencyTo;
     private BigDecimal conversionRate;
+    private String port;
 }

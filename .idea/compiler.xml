@@ -7,19 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="currency-conversion-service" />
+        <module name="flight-fare-service" />
         <module name="cloud-configuration-server" />
+        <module name="currency-conversion-service" />
+        <module name="spring-cloud-netflix-eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-configuration-server" target="11" />
       <module name="currency-conversion-service" target="11" />
+      <module name="flight-fare-service" target="11" />
+      <module name="spring-cloud-netflix-eureka-server" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-configuration-server" options="-parameters" />
       <module name="currency-conversion-service" options="-parameters" />
+      <module name="flight-fare-service" options="-parameters" />
+      <module name="spring-cloud-netflix-eureka-server" options="-parameters" />
     </option>
   </component>
 </project>

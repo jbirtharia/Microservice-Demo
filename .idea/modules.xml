@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Microservice-Demo.iml" filepath="$PROJECT_DIR$/.idea/Microservice-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-configuration-server/cloud-configuration-server.iml" filepath="$PROJECT_DIR$/cloud-configuration-server/cloud-configuration-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" filepath="$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flight-fare-service/flight-fare-service.iml" filepath="$PROJECT_DIR$/flight-fare-service/flight-fare-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-netflix-eureka-server/spring-cloud-netflix-eureka-server.iml" filepath="$PROJECT_DIR$/spring-cloud-netflix-eureka-server/spring-cloud-netflix-eureka-server.iml" />
     </modules>
   </component>
 </project>

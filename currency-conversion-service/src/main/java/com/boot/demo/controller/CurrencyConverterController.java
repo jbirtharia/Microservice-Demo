@@ -2,6 +2,7 @@ package com.boot.demo.controller;
 
 import com.boot.demo.dao.CurrencyConverterRepository;
 import com.boot.demo.model.CurrencyConverter;
+import org.springframework.core.env.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -26,12 +27,18 @@ public class CurrencyConverterController {
     @Value("${app.message}")
     private String message;
 
+    @Autowired
+    private Environment env;
+
     @GetMapping("/from/{from}/to/{to}")
     public CurrencyConverter convertCurrency(@PathVariable String from, @PathVariable String to){
 
-        CurrencyConverter converter = new CurrencyConverter(null, from, to, null);
+        CurrencyConverter converter = new CurrencyConverter(null, from, to, null,null);
         Example<CurrencyConverter> conversionFilter = Example.of(converter);
-        return converterRepository.findOne(conversionFilter).orElse(null);
+        CurrencyConverter responseEntity = converterRepository.findOne(conversionFilter).orElse(null);
+        if(null != responseEntity)
+            responseEntity.setPort(env.getProperty("server.port"));
+        return responseEntity;
     }
 
         @GetMapping("/message")
