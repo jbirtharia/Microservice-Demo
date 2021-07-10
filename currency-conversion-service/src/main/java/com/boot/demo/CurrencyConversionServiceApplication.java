@@ -10,14 +10,30 @@ import org.springframework.context.annotation.Bean;
 
 import java.math.BigDecimal;
 
+/**
+ * The type Currency conversion service application.
+ *
+ * @author JayendraB  Created on 02/07/21
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
 public class CurrencyConversionServiceApplication{
 
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(CurrencyConversionServiceApplication.class, args);
 	}
 
+	/**
+	 * Populate initial data command line runner.
+	 *
+	 * @param repository the repository
+	 * @return the command line runner
+	 */
 	@Bean
 	public CommandLineRunner populateInitialData(CurrencyConverterRepository repository) {
 		return args -> {

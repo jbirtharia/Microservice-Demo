@@ -8,8 +8,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
- * @author JayendraB
- * Created on 08/07/21
+ * The type Flight fare.
+ *
+ * @author JayendraB  Created on 08/07/21
  */
 @Entity
 @Data

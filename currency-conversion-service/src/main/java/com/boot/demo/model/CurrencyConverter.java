@@ -11,8 +11,9 @@ import javax.persistence.GenerationType;
 import java.math.BigDecimal;
 
 /**
- * @author JayendraB
- * Created on 02/07/21
+ * The type Currency converter.
+ *
+ * @author JayendraB  Created on 02/07/21
  */
 @Data
 @AllArgsConstructor

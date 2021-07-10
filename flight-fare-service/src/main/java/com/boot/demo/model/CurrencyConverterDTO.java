@@ -4,8 +4,9 @@ import lombok.*;
 import java.math.BigDecimal;
 
 /**
- * @author JayendraB
- * Created on 08/07/21
+ * The type Currency converter dto.
+ *
+ * @author JayendraB  Created on 08/07/21
  */
 @Data
 @AllArgsConstructor
