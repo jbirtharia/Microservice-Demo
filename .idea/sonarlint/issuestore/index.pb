@@ -161,20 +161,10 @@ S
 _cloud-configuration-server/src/main/java/com/boot/demo/CloudConfigurationServerApplication.java,6/f/6f1e1b4ce1481edc0f36492ae33c2ff9c643565a
 Ñ
 Tcurrency-conversion-service/src/main/java/com/boot/demo/model/CurrencyConverter.java,2/4/244bc5b83b82a3db52e01a1383cc3610a4174fc3
-
-Oflight-fare-service/src/main/java/com/boot/demo/model/CurrencyConverterDTO.java,0/e/0e6ec294df1d1094933affb2bbf8c63e2e087415
 å
 \currency-conversion-service/src/main/java/com/boot/demo/dao/CurrencyConverterRepository.java,d/d/dd01076ca4711ee50820f16f3f9360499f99254e
 ç
 ]currency-conversion-service/src/main/java/com/boot/demo/service/CurrencyConverterService.java,b/2/b203b00b9b5a767b5f84e678130e6764f0521d11
-ü
-oflight-fare-service/src/main/java/com/boot/demo/exception/handler/CustomizedResponseEntityExceptionHandler.java,e/5/e5642f68e7d79853b675d81fd07e47d48075b41f
-à
-Xflight-fare-service/src/main/java/com/boot/demo/exception/handler/ExceptionResponse.java,6/6/66c8b69a59a49b3d789b4fe642153afc6e83c55d
-u
-Eflight-fare-service/src/main/java/com/boot/demo/model/FlightFare.java,4/a/4a20f720e76ee919eb632bb20740fc6047a5f7c4
-}
-Mflight-fare-service/src/main/java/com/boot/demo/dao/FlightFareRepository.java,2/c/2c949900c66c085af65aa3fceaf8a0e7d89c0049
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4/9/496a238a6afa168dbaf6efd37bb459331589579c
 ]
@@ -182,10 +172,6 @@ Mflight-fare-service/src/main/java/com/boot/demo/dao/FlightFareRepository.java,
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-Ñ
-Tflight-fare-service/src/main/java/com/boot/demo/controller/FlightFareController.java,a/f/af9b2ca0f3d5d9da053a4df39cbdde8bbea98046
-Ç
-Rflight-fare-service/src/main/java/com/boot/demo/feign/CurrencyConversionProxy.java,9/8/98aaef7dbad8f4efb016490975d58c0b2e859a03
 ë
 acurrency-conversion-service/src/main/java/com/boot/demo/CurrencyConversionServiceApplication.java,0/a/0a46902d8c7ea2e1bf2e557a2bf4f07fdef8f302
 ì

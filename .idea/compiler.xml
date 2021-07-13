@@ -10,7 +10,6 @@
         <module name="flight-fare-service" />
         <module name="cloud-configuration-server" />
         <module name="currency-conversion-service" />
-        <module name="spring-cloud-netflix-eureka-server" />
         <module name="flight-api-gateway" />
       </profile>
     </annotationProcessing>
