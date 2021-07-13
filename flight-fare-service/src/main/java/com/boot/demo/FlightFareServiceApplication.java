@@ -2,10 +2,15 @@ package com.boot.demo;
 
 import com.boot.demo.dao.FlightFareRepository;
 import com.boot.demo.model.FlightFare;
+import feign.Logger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 import java.math.BigDecimal;
 
@@ -15,6 +20,8 @@ import java.math.BigDecimal;
  * @author JayendraB  Created on 02/07/21
  */
 @SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients  // scan the interfaces marked with @FeignClient
 public class FlightFareServiceApplication {
 
 	/**
@@ -44,4 +51,27 @@ public class FlightFareServiceApplication {
 		};
 	}
 
+	/**
+	 * Rest template rest template.
+	 * Create the object of RestTemplate and setup a load balancer on it.
+	 *
+	 * @return the rest template
+	 */
+	@Bean
+	@LoadBalanced
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
+
+	/**
+	 * Feign default logger level logger . level.
+	 * Registering Logger bean for feign to track HTTP Request and Response.
+	 *
+	 * @return the logger . level
+	 */
+	@Bean
+	Logger.Level feignDefaultLoggerLevel()
+	{
+		return Logger.Level.FULL;
+	}
 }
