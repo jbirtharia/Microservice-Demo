@@ -11,6 +11,7 @@
         <module name="cloud-configuration-server" />
         <module name="currency-conversion-service" />
         <module name="flight-api-gateway" />
+        <module name="spring-cloud-netflix-eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
