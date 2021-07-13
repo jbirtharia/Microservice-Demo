@@ -11,11 +11,13 @@
         <module name="cloud-configuration-server" />
         <module name="currency-conversion-service" />
         <module name="spring-cloud-netflix-eureka-server" />
+        <module name="flight-api-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-configuration-server" target="11" />
       <module name="currency-conversion-service" target="11" />
+      <module name="flight-api-gateway" target="11" />
       <module name="flight-fare-service" target="11" />
       <module name="spring-cloud-netflix-eureka-server" target="11" />
     </bytecodeTargetLevel>
@@ -24,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-configuration-server" options="-parameters" />
       <module name="currency-conversion-service" options="-parameters" />
+      <module name="flight-api-gateway" options="-parameters" />
       <module name="flight-fare-service" options="-parameters" />
       <module name="spring-cloud-netflix-eureka-server" options="-parameters" />
     </option>

@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/cloud-configuration-server/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-netflix-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/flight-fare-service/pom.xml" />
+        <option value="$PROJECT_DIR$/flight-api-gateway/pom.xml" />
       </list>
     </option>
   </component>

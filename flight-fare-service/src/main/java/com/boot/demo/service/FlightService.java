@@ -86,8 +86,7 @@ public class FlightService {
         urlPathVariables.put("from", baseCurrency);
         urlPathVariables.put("to", toCurrency);
 
-        // Hostname will be resolved by Eureka server of Constant.CONVERSION_URL by using Eureka Registry
-        // We need incoming response data to a type
+        // Hostname will be resolved by Eureka server of conversionURL by using Eureka Registry
         ResponseEntity<CurrencyConverterDTO> responseEntity = restTemplate.getForEntity(conversionURL,
                 CurrencyConverterDTO.class, urlPathVariables);
         log.info("Response Entity : {}",responseEntity);
