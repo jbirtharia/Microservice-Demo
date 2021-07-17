@@ -1,0 +1,64 @@
+version: '3.7'
+services:
+
+  eureka-server:
+    image: jbirtharia/spring-cloud-netflix-eureka-server:0.0.1-SNAPSHOT
+    ports:
+      - "8010:8010"
+    restart: always
+    networks:
+      - currency-compose-network
+
+
+  currency-service:
+    image: jbirtharia/currency-conversion-service:0.0.1-SNAPSHOT
+    ports:
+      - "7101:7101"
+    restart: always
+    depends_on:
+      - eureka-server
+      - cloud-configuration-server
+    networks:
+      - currency-compose-network
+
+
+  flight-service:
+    image: jbirtharia/flight-fare-service:0.0.1-SNAPSHOT
+    ports:
+      - "7103:7103"
+    restart: always
+    depends_on:
+      - eureka-server
+      - cloud-configuration-server
+      - currency-service
+    networks:
+      - currency-compose-network
+
+
+  flight-api-gateway:
+    image: jbirtharia/flight-api-gateway:0.0.1-SNAPSHOT
+    ports:
+      - "8765:8765"
+    restart: always
+    depends_on:
+      - eureka-server
+      - cloud-configuration-server
+      - currency-service
+      - flight-service
+    networks:
+      - currency-compose-network
+
+
+  cloud-configuration-server:
+    image: jbirtharia/cloud-configuration-server:0.0.1-SNAPSHOT
+    ports:
+      - "8888:8888"
+    restart: always
+    depends_on:
+      - eureka-server
+    networks:
+      - currency-compose-network
+
+
+networks:
+  currency-compose-network:
