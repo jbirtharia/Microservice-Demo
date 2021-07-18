@@ -14,6 +14,9 @@ services:
     image: jbirtharia/currency-conversion-service:0.0.1-SNAPSHOT
     ports:
       - "7101:7101"
+    environment:
+      EUREKA_URL: eureka-server
+      CLOUD_CONFIG_URL: cloud-configuration-server
     restart: always
     depends_on:
       - eureka-server
@@ -26,6 +29,9 @@ services:
     image: jbirtharia/flight-fare-service:0.0.1-SNAPSHOT
     ports:
       - "7103:7103"
+    environment:
+      EUREKA_URL: eureka-server
+      CLOUD_CONFIG_URL: cloud-configuration-server
     restart: always
     depends_on:
       - eureka-server
@@ -39,6 +45,8 @@ services:
     image: jbirtharia/flight-api-gateway:0.0.1-SNAPSHOT
     ports:
       - "8765:8765"
+    environment:
+      EUREKA_URL: eureka-server
     restart: always
     depends_on:
       - eureka-server
